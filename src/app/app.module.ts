@@ -10,12 +10,14 @@ import { TrainService } from './train/train.component.service';
 import { RecogniseService } from './recognise/recognise.component.service';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainComponent,
-    RecogniseComponent
+    RecogniseComponent,
+    HomeComponent
     
   ],
   imports: [
