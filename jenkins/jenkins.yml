@@ -20,13 +20,6 @@ spec:
               containerPort: 8080
             - name: jnlp-port
               containerPort: 50000
-      #     volumeMounts:
-      #       - name: jenkins-pv-volume
-      #         mountPath: /var/jenkins_home
-      # volumes:
-      #   - name: jenkins-pv-volume
-      #     persistanceVolumeClaim:
-      #       claimName: jenkins-pv-volume
 ---
 apiVersion: v1
 kind: Service

@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: angular
-          image: "mycluster.icp:8500/default/angular:latest"
+          image: "s4saif/face:latest"
           imagePullPolicy: Always
 ---
 apiVersion: v1
