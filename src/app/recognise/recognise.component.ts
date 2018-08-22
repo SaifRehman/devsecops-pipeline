@@ -11,6 +11,7 @@ export class RecogniseComponent implements OnInit {
   name:any
   onOff:Boolean;
   public localstream:any;
+  public loading:any=false;
 
   @ViewChild("video")
   public video: ElementRef;
@@ -31,15 +32,18 @@ export class RecogniseComponent implements OnInit {
 
   }
   recognise(){
+    this.loading = true;
     var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 640, 480);
     this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
     let base64 = this.canvas.nativeElement.toDataURL("image/png")
     console.log(base64);
     this.recogniseService.recognise(base64,"saif").subscribe((data) => {
-      this.toastr.success('You are ', data['images'][0]['transaction']['subject_id']);
+      this.toastr.success( data['images'][0]['transaction']['subject_id'], 'Welcome');
       console.log('data', data);
+      this.loading = false;
   },
   (error) => {
+    this.loading = false;
       // alert("Login not Succesfull")
   });
 

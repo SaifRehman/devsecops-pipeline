@@ -10,7 +10,7 @@ export class TrainComponent implements OnInit {
   name:any
   onOff:Boolean;
   public localstream:any;
-
+  public loading:any=false;
   @ViewChild("video")
   public video: ElementRef;
 
@@ -29,12 +29,14 @@ export class TrainComponent implements OnInit {
 
   }
   train(){
+    this.loading = true;
     var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 640, 480);
     this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
     let base64 = this.canvas.nativeElement.toDataURL("image/png")
     console.log(base64);
     this.trainService.train(base64,this.name).subscribe((data) => {
       console.log('data', data);
+      this.loading = false;
 
   },
   (error) => {
