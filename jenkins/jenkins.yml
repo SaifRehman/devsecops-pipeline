@@ -11,7 +11,8 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: jenkinsci/blueocean
+          image: jenkins1
+          imagePullPolicy: Never
           env:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false

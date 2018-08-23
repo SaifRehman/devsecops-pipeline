@@ -1,4 +1,3 @@
-
 FROM node as node
 WORKDIR /usr/src/app
 COPY package.json ./
