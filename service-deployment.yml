@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: angular
-          image: "s4saif/face:latest"
+          image: "s4saif/face1:latest"
           imagePullPolicy: Always
 ---
 apiVersion: v1
