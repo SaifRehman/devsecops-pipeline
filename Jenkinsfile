@@ -27,40 +27,32 @@ podTemplate(
             mountPath: '/var/run/docker.sock'
         )
     ]
-)
-node {
-    def app
-
-    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
-
-        checkout scm
-    }
-
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-
-        app = docker.build("s4saif/face")
-    }
-
-    stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
-
-        app.inside {
-            sh 'echo "Tests passed"'
+) {
+    node('mypod') {
+        def commitId
+        stage ('Extract') {
+            checkout scm
+            commitId = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         }
-    }
-
-    stage('Push image') {
-        /* Finally, we'll push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag.
-         * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+        stage ('Build') {
+            container ('golang') {
+                sh 'CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .'
+            }
+        }
+        def repository
+        stage ('Docker') {
+            container ('docker') {
+                def registryIp = sh(script: 'getent hosts registry.kube-system | awk \'{ print $1 ; exit }\'', returnStdout: true).trim()
+                repository = "${registryIp}:80/hello"
+                sh "docker build -t ${repository}:${commitId} ."
+                sh "docker push ${repository}:${commitId}"
+            }
+        }
+        stage ('Deploy') {
+            container ('helm') {
+                sh "/helm init --client-only --skip-refresh"
+                sh "/helm upgrade --install --wait --set image.repository=${repository},image.tag=${commitId} hello hello"
+            }
         }
     }
 }
