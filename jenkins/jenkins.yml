@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: jenkins:latest
+          image: jenkinsci/blueocean
           env:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false
