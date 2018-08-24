@@ -126,7 +126,7 @@ $ kubectl get pods
 * Install plugin ```GitHub Integration Plugin```
 * Install plugin ```IBM Application Security on Cloud```
 * Install plugin ```Pipeline```
-
+ > Note: this jenkins has aready installed kubectl and docker 
 ### Configuring Aqua vulneribility Scanner
 1. Go to this link, sign up and get the token in your email ```https://microscanner.aquasec.com/signup```
 2. Replace ```xxx``` in line 19 with your api key
@@ -159,4 +159,35 @@ $ kubectl get pods
 
 ![14](images/14.png)
 
-### Connecting 
+### Connecting Jenkins with Kubernetes for automated deployment once image is built
+#### Confguring jenkins pod
+1. Configure kubectl in jenkins pod
+```
+$ kubectl get pods
+```
+> note down pod name
+
+2. Copy .pem and .yml file provided by IBM Kubernetes service to jenkins pod in ```/bin``` directory 
+3. Note down where cluster configuration files are hosted
+```
+$ ibmcloud cs cluster-config mycluster
+```
+![16](images/16.png)
+4. copy both pem and .yml file
+```
+$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/kube-config-mel01-mycluster.yml /bin
+$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/ca-mel01-mycluster.pem /bin
+```
+> this is example, your files may have different names
+5. ssh to your cluster, and set the kubeconfig
+```
+$ kubectl exec -it podname /bin/bash
+$ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
+```
+6. Go to service-deployent.yml file and replace image with name of your image you created ```yourid/imagename```
+> check line 14
+![17](images/17.png)
+
+####  Creating your first jenkins pipeline 
+1. Go to your ```ip:30012``` which has your jenkins installation
+
