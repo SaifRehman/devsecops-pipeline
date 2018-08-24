@@ -87,3 +87,5 @@ $  kubectl get nodes
 ```
 ![6](images/6.png)
 
+> You will be able to access your cluster now hosted in IBM Kubernetes Service
+
