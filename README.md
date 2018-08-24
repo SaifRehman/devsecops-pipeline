@@ -127,6 +127,12 @@ $ kubectl get pods
 * Install plugin ```IBM Application Security on Cloud```
 * Install plugin ```Pipeline```
 
+### Configuring Aqua vulneribility Scanner
+1. Go to this link, sign up and get the token in your email ```https://microscanner.aquasec.com/signup```
+2. Replace ```xxx``` in line 19 with your api key
+
+![15](images/15.png)
+
 ### Connecting Github to DockerCloud for autonomous image build and push
 1. Go to [Docker Cloud](https://cloud.docker.com/) and sign in, then click on ```repository tab ```
 2. Click on your name on top right side and select ``` Personal Settings```
@@ -153,3 +159,4 @@ $ kubectl get pods
 
 ![14](images/14.png)
 
+### Connecting 
