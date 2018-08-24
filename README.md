@@ -115,3 +115,14 @@ $ kubectl get pods
 5. You will be able to access jenkins http://ip:30012
 
 ![9](images/9.png)
+
+6. Install required plugin to create our first pipeline. Go to ``` Manage Jenkins ```, then click on ``` Manage Plugins ```, select ``` available tab ```
+
+![10](images/10.png)
+
+> you will see something like this
+
+* Install plugin ```Custom Tools Plugin```
+* Install plugin ```GitHub Integration Plugin```
+* Install plugin ```IBM Application Security on Cloud```
+* Install plugin ```Pipeline```
