@@ -104,3 +104,14 @@ $ kubectl create -f jenkins.yml
 $ kubectl get pods
 ```
 ![7](images/7.png)
+
+> This mean jenkin pod is up and running sucessfully
+4. Check ip to access, go to your cluster and note down ip
+
+![8](images/8.png)
+
+> jenkins is hosted in port 30012
+
+5. You will be able to access jenkins http://ip:30012
+
+![9](images/9.png)
