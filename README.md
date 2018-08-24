@@ -29,4 +29,7 @@
 ## What are we building?
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
 
+## Application Architecture
+![1](images/1.png)
+
 ##
