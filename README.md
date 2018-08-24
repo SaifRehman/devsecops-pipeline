@@ -255,3 +255,6 @@ Go to **IBM Application Security on Cloud**, then go to ```My Scan``` from hambu
 You can now download a sample report and look at it 
 
 ![27](images/27.png)
+
+# Conclusion
+You were able to create a end to end simple continuous deployment pipeline with test driven security. 
