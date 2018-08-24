@@ -126,3 +126,25 @@ $ kubectl get pods
 * Install plugin ```GitHub Integration Plugin```
 * Install plugin ```IBM Application Security on Cloud```
 * Install plugin ```Pipeline```
+
+### Connecting Github to DockerCloud for autonomous image build and push
+1. Go to [Docker Cloud](https://cloud.docker.com/) and sign in, then click on ```repository tab ```
+2. Click on your name on top right side and select ``` Personal Settings```
+3. Select ```Service Providers```
+4. Then go ``` linked accounts ``` and activate github
+
+![11](images/11.png)
+
+5. Click on ```repositories``` on top tab, click on create
+
+![12](images/12.png)
+
+6. Give name to your docker image, then click on ```github icon```, select ```organization``` then select the repository you forked
+
+> You are all set! Lets double check!
+
+7. Go to your forked github repo, select ```settings```, select ```webhooks```, you will see a webhook created automagically ;)
+
+![13](images/13.png)
+
+
