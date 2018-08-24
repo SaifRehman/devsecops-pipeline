@@ -92,5 +92,15 @@ $  kubectl get nodes
 ### Fork the repo
 1. Fork the [DevSecOps Repo](https://github.com/SaifRehman/devsecops-pipeline)
 2. Clone your forked repo locally
-###
 
+### Deploy Jenkins to Kubernetes Cluster
+1. Navigate to ```jenkins``` folder 
+2. Deploy ```Kubernetes Deployment``` and ```Kubernetes services```
+```
+$ kubectl create -f jenkins.yml
+```
+3. Check if its deployed and running 
+```
+$ kubectl get pods
+```
+![7](images/7.png)
