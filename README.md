@@ -19,4 +19,14 @@
 <br>
 
 ## Learning Objectives?
+1. Understand basic Kubernetes and Docker concepts
+2. Using IBM Kubernetes Service
+3. Deploying application to Kubernetes
+4. Building and creating Dockerfile
+5. Container and Application Security
+5. Implementing a DevSecOps Continous Delivery pipeline using Jenkins, IBM Application Security, GitHub, and AquaScan
 
+## What are we building?
+Sample Angular Application where building, security testing, and deployment of the application is automated.  
+
+##
