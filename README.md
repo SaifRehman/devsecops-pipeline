@@ -52,3 +52,36 @@ Sample Angular Application where building, security testing, and deployment of t
 8. [Aqua Micro Scanner](https://github.com/aquasecurity/microscanner):- Aqua Security's MicroScanner lets you check your container images for vulnerabilities. If your image has any known high-severity issue, MicroScanner can fail the image build, making it easy to include as a step in your CI/CD pipeline.
 9. [Docker Cloud](https://cloud.docker.com/):- Docker Cloud is the name of the new cloud service by Docker that expands on the features of Tutum, brings a tighter integration with Docker Hub, and provides new updates and fixes
 10. [Github](https://github.com/):- GitHub Inc. is a web-based hosting service for version control using Git. It is mostly used for computer code
+
+### Setting a Cluster in IBM Kubernetes Service
+1. Go to [IBM Cloud console](https://console.bluemix.net/dashboard/apps/)
+2. Navigate to containers
+![1](imgages/3.png)
+
+3. Click on create new cluster
+![10](images/4.png)
+
+4. Name your cluster and create a cluster, wiat for few minutes to get it fully deployed. After it is fully deployed click on the cluster
+![11](images/5.png)
+ 
+* This shows overview of your deployed cluster 
+5. Click on Access tab and follow the instruction on the website
+6. Install the container service plugin.
+```
+$ ibmcloud plugin install container-service -r Bluemix
+```
+7. Log in to your IBM Cloud account.
+```
+$ ibmcloud login -a https://api.eu-de.bluemix.net
+$ ibmcloud cs region-set eu-central
+```
+7. Set the context for the cluster in in your CLI.
+* Get the command to set the environment variable and download the Kubernetes configuration files.
+```
+$ ibmcloud cs cluster-config NameOfYourCluster
+```
+* Set the KUBECONFIG environment variable. Copy the output from the previous command and paste it in your terminal. The command output should look similar to the following.
+8.  Verify that you can connect to your cluster by listing your worker nodes
+```
+$  kubectl get nodes
+```
