@@ -26,6 +26,14 @@
 5. Container and Application Security
 5. Implementing a DevSecOps Continous Delivery pipeline using Jenkins, IBM Application Security, GitHub, and Aqua Micro-Scanner
 
+## Prerequisites
+1. Signup to [IBM Cloud](https://nodejs.org/en/download/)
+2. Signup to [IBM Application Security Free Trial](https://www.ibm.com/ae-en/marketplace/application-security-on-cloud)
+3. Signup to [Github](https://github.com/)
+4. Signup to [Docker Hub](https://hub.docker.com/)
+5. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+6. Intall [Docker](https://docs.docker.com/install/)
+
 ## What are we building?
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
 
