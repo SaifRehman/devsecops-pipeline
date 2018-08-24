@@ -27,7 +27,7 @@
 5. Implementing a DevSecOps Continous Delivery pipeline using Jenkins, IBM Application Security, GitHub, and Aqua Micro-Scanner
 
 ## Prerequisites
-1. Signup to [IBM Cloud](https://nodejs.org/en/download/)
+1. Signup to [IBM Cloud](https://console.bluemix.net/)
 2. Signup to [IBM Application Security Free Trial](https://www.ibm.com/ae-en/marketplace/application-security-on-cloud)
 3. Signup to [Github](https://github.com/)
 4. Signup to [Docker Hub](https://hub.docker.com/)
