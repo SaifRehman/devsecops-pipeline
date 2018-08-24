@@ -222,3 +222,28 @@ su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-c
 > you will have different github link, and different KUBECONFIG
 8. Click on ``` Apply```, then click on ```Save```
 
+### Configure IBM Application Security with jenkins
+1. Sign in [IBM Application Security](https://appscan.ibmcloud.com/AsoCUI/serviceui/home)
+2. Click on hamburger menu and select ```settings/api```
+3. Click generate, note down both ```id``` and ```secret```
+
+![23](images/23.png)
+> Note:- dont share the credentials :)
+
+4. Go to your jenkins instance
+5. Click on ```Credential```, then click on ```system```, then click on ``` Global credentials (unrestricted)```, select ```add credential```
+6. Select ```IBM Application Security on Cloud Credentials``` from ```kind```
+![24](images/24.png)
+7. Add valid credential you obtained.
+8. Click ok
+9. Go to jenkins homepage. Select your freestyle project you created. Click on ```configure```
+10. scroll down and click on. Click on ``` Add Build step```, select ```Run Security Test```
+11. Select the credentials you set before
+12. Give applicatio name, and test name
+13. Select ```dynamic analyzer ``` from test type 
+
+![25](images/25.png)
+
+14. Click on ``` Apply```, then click on ```Save```
+> you are all set :)
+
