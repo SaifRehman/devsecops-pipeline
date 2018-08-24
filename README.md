@@ -56,7 +56,7 @@ Sample Angular Application where building, security testing, and deployment of t
 ### Setting a Cluster in IBM Kubernetes Service
 1. Go to [IBM Cloud console](https://console.bluemix.net/dashboard/apps/)
 2. Navigate to containers
-![1](imgages/3.png)
+![1](images/3.png)
 
 3. Click on create new cluster
 ![10](images/4.png)
