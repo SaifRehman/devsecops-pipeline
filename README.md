@@ -188,6 +188,11 @@ $ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
 > check line 14
 ![17](images/17.png)
 
+#### Configure webhook
+1.  Go to your forked github repo, select ```settings```, select ```webhooks```, create a webhook, select ```application.json```
+2. Set your ```project URL```. This is your jenkinsip:30012/github-webhook/ 
+![22](images/22.png)
+
 ####  Creating your first jenkins pipeline 
 1. Go to your ```ip:30012``` which has your jenkins installation
 2. Click ```New Item```, name your project and select ```freestyle project```
@@ -206,7 +211,7 @@ $ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
 7. Paste in following code 
 ```sh
 #!/bin/bash
-sleep 600
+sleep 1000
 echo 'hello'
 if [ ! -d "facial-recognition" ]; then
  su - root -c 'git clone https://github.com/SaifRehman/facial-recognition.git'
