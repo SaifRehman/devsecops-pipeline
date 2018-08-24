@@ -229,6 +229,7 @@ su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-c
 
 ![23](images/23.png)
 > Note:- dont share the credentials :)
+> It will ask you to download ```DomainVerification.html```. download that and add it ```src``` folder
 
 4. Go to your jenkins instance
 5. Click on ```Credential```, then click on ```system```, then click on ``` Global credentials (unrestricted)```, select ```add credential```
@@ -239,7 +240,7 @@ su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-c
 9. Go to jenkins homepage. Select your freestyle project you created. Click on ```configure```
 10. scroll down and click on. Click on ``` Add Build step```, select ```Run Security Test```
 11. Select the credentials you set before
-12. Give applicatio name, and test name
+12. Give application name, and test name
 13. Select ```dynamic analyzer ``` from test type 
 
 ![25](images/25.png)
@@ -247,3 +248,10 @@ su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-c
 14. Click on ``` Apply```, then click on ```Save```
 > you are all set :)
 
+Go to **IBM Application Security on Cloud**, then go to ```My Scan``` from hamburger menu. you can see all your scans which were automatically generated
+
+![26](images/26.png)
+
+You can now download a sample report and look at it 
+
+![27](images/27.png)
