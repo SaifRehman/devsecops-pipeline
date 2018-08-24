@@ -190,4 +190,12 @@ $ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
 
 ####  Creating your first jenkins pipeline 
 1. Go to your ```ip:30012``` which has your jenkins installation
+2. Click ```New Item```, name your project and select ```freestyle project```
+3. Select ```GitHub Project```, and add your github link
+ 
+![18](images/18.png)
+ 
+4. From ```Source Code Management``` select ```Git```. Add your repository git url
+
+![19](images/19.png)
 
