@@ -22,8 +22,7 @@ node {
         stage('redeploy the deployment to kubernetes ') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-          sh 'kubectl delete deployments angular '
-          sh 'kubectl apply -f service-deployment.yml '
+          sh 'export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml '
           
     }
 
