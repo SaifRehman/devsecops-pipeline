@@ -30,6 +30,6 @@
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
 
 ## Application Architecture
-![1](images/1.png)
+![1](images/2.png)
 
 ##
