@@ -199,3 +199,20 @@ $ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
 
 ![19](images/19.png)
 
+5. From ```Build Triggers```, select ```GitHub hook trigger for GITScm polling```
+![20](images/20.png)
+
+6. Click on add build step, select ```execute shell``
+7. Paste in following code 
+```sh
+#!/bin/bash
+sleep 600
+echo 'hello'
+if [ ! -d "facial-recognition" ]; then
+ su - root -c 'git clone https://github.com/SaifRehman/facial-recognition.git'
+fi
+su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml"
+```
+> you will have different github link, and different KUBECONFIG
+8. Click on ``` Apply```, then click on ```Save```
+
