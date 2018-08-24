@@ -149,6 +149,7 @@ $ kubectl get pods
 
 > Now if you commit and push to github image build will be triggered automagically ;)
 
-8. Go to ```Docker cloud```, select 
+8. Go to ```Docker cloud```, select your image and click on ```timeline```
 
+![14](images/14.png)
 
