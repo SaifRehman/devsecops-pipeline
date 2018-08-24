@@ -22,8 +22,10 @@ node {
         stage('redeploy the deployment to kubernetes ') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-          sh 'export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml '
+          sh 'cd facial-recognition && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml '
           
     }
 
 }
+
+
