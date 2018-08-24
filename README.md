@@ -32,7 +32,7 @@
 3. Signup to [Github](https://github.com/)
 4. Signup to [Docker Hub](https://hub.docker.com/)
 5. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-6. Intall [Docker](https://docs.docker.com/install/)
+6. Install [Docker](https://docs.docker.com/install/)
 
 ## What are we building?
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
