@@ -33,14 +33,13 @@
 4. Signup to [Docker Hub](https://hub.docker.com/)
 5. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 6. Install [Docker](https://docs.docker.com/install/)
+7. Install [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)
 
 ## What are we building?
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
 
 ## Application Architecture
 ![1](images/2.png)
-
-
 
 #### Featured technologies
 1. [Angular4](https://angular.io/):- Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges
