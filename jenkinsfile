@@ -3,21 +3,20 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-        checkout scm
+        sh 'git clone https://github.com/SaifRehman/facial-recognition.git'
     }
 
     stage('building and pushing to docker registery ') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         echo 'Waiting 5 minutes for deployment to complete prior starting smoke testing'
-        sleep 500 // seconds
+        sleep 2 // seconds
     }
 
         stage('setting kubeconfig ') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         sh 'export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml'
-        sleep 500 // seconds
     }
 
         stage('redeploy the deployment to kubernetes ') {
