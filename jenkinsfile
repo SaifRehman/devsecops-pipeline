@@ -25,7 +25,6 @@ node {
           sh 'cd facial-recognition && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml '
           
     }
-
 }
 
 
