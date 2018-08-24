@@ -85,3 +85,5 @@ $ ibmcloud cs cluster-config NameOfYourCluster
 ```
 $  kubectl get nodes
 ```
+![6](images/6.png)
+
