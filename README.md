@@ -34,7 +34,7 @@
 5. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 6. Install [Docker](https://docs.docker.com/install/)
 7. Install [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)
-
+8. Install [GitCli](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ## What are we building?
 Sample Angular Application where building, security testing, and deployment of the application is automated.  
 
@@ -88,4 +88,9 @@ $  kubectl get nodes
 ![6](images/6.png)
 
 > You will be able to access your cluster now hosted in IBM Kubernetes Service
+
+### Fork the repo
+1. Fork the [DevSecOps Repo](https://github.com/SaifRehman/devsecops-pipeline)
+2. Clone your forked repo locally
+###
 
