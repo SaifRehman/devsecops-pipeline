@@ -213,6 +213,7 @@ if [ ! -d "facial-recognition" ]; then
 fi
 su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml"
 ```
+![21](images/21.png)
 > you will have different github link, and different KUBECONFIG
 8. Click on ``` Apply```, then click on ```Save```
 
