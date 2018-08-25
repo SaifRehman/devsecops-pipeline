@@ -175,8 +175,8 @@ $ ibmcloud cs cluster-config mycluster
 ![16](images/16.png)
 4. copy both pem and .yml file
 ```
-$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/kube-config-mel01-mycluster.yml /bin
-$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/ca-mel01-mycluster.pem /bin
+$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/kube-config-mel01-mycluster.yml podname:/bin
+$ kubectl cp /Users/saifrehman/.bluemix/plugins/container-service/clusters/mycluster/ca-mel01-mycluster.pem podname:/bin
 ```
 > this is example, your files may have different names
 5. ssh to your cluster, and set the kubeconfig
