@@ -211,12 +211,12 @@ $ export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml
 7. Paste in following code 
 ```sh
 #!/bin/bash
-sleep 1000
+sleep 700
 echo 'hello'
-if [ ! -d "facial-recognition" ]; then
- su - root -c 'git clone https://github.com/SaifRehman/facial-recognition.git'
+if [ ! -d "devsecops-pipeline" ]; then
+ su - root -c 'git clone https://github.com/SaifRehman/devsecops-pipeline.git'
 fi
-su - root -c "cd facial-recognition && git pull && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml"
+su - root -c "cd devsecops-pipeline && git pull && export KUBECONFIG=/bin/kube-config-mel01-mycluster.yml && kubectl delete deployments angular && kubectl apply -f service-deployment.yml"
 ```
 ![21](images/21.png)
 > you will have different github link, and different KUBECONFIG
